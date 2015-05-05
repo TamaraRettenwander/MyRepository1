@@ -17,7 +17,7 @@ public class Liste<T extends Aufgabe3>
     
         public void save (T wert) //nimmt ein Element auf
         {
-            for (int i = 0; i < array.length; i++)
+            for (int i = 0; i < array.length; i++) 
             {
                 if (array[i] == null) // bei freier Stelle
                 {
@@ -25,6 +25,12 @@ public class Liste<T extends Aufgabe3>
                     System.out.println("Ihr Eintrag wurde erfolgreich gespeichert!");
                     break;
                 }
+                else if (array[array.length-1]!= null) //wenn vorheriges Arrayfeld mit Werten
+                {
+                    System.err.println("ARRAY VOLL");
+                    break;
+                }
+
             }
         }
 
